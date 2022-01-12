@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+
+<h1>New Blog Page</h1>
+
+<form class="ui form" action="/blogs" method="POST">
+    <div class="field">
+        <label for="title">Title</label>
+        <input type="text" name="blog[title]" id="title">
+    </div>
+    <div class="field">
+        <label for="image">Image</label>
+        <input type="text" name="blog[image]" id="image">
+    </div>
+    <div class="field">
+        <label for="body">Body</label>
+        <textarea name="blog[body]" id="body" rows="5"></textarea>
+    </div>
+    <div>
+        <input class="ui blue button" type="submit" value="Publish">
+    </div>
+</form>
+
+
+<%- include('partials/footer.ejs') %>

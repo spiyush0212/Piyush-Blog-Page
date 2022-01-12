@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+
+<h1 class="ui huge header center aligned">Welcome to Piyush's Blogging Webpage</h1>
+
+<div class="ui stackable eight column grid">
+
+    <% blogs.forEach((blog) => { %>
+    <div class="eight wide column">
+        <h2 class="ui top attached header"><%= blog.title %></h2>
+        <div class="ui attached segment">
+            <img class="ui medium bordered image" src="<%= blog.image %>" alt="Image for the blog page">
+            <h3><%= blog.date.toDateString() %></h3>
+            <p><%= blog.body.substring(0, 250) %> ... </p>
+            <a class="ui green button" href="/blogs/<%= blog._id %> ">Read more</a>
+        </div>
+        <div class="ui divider"></div>
+    </div>
+    <% }); %>
+
+</div>
+
+<%- include('partials/footer.ejs') %>

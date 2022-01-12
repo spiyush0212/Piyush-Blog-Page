@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+i.icon {
+  font-size: 2em;
+}
+
+#deleteForm {
+  display: inline;
+}
